@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://114.132.63.217:3306/yuapi
+    username: yuapi
+    password: root
+dubbo:
+  application:
+    name: dubbo-springboot-demo-provider
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    id: nacos-registry
+    address: nacos://114.132.63.217:8848
+server:
+  address: 0.0.0.0
+  port: 7529
+  servlet:
+    context-path: /api
+    session:
+      cookie:
+        comment: 2592000
+        domain: 114.132.63.217
